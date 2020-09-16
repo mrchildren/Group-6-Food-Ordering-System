@@ -1,0 +1,61 @@
+CREATE TABLE PRODUCTS(
+P_ID int NOT NULL AUTO_INCREMENT,
+NAME VARCHAR(20) NOT NULL,
+DESC VARCHAR(99) NOT NULL,
+PRICE double(5) NOT NULL,
+IMGDIR VARCHAR(99) NOT NULL,
+TYPE INT NOT NULL,
+PRIMARY KEY (P_ID)
+);
+
+CREATE TABLE OORDER ( 
+O_ID INT NOT NULL AUTO_INCREMENT,
+TOTPRICE DOUBLE(5),
+DATE DATE,
+TIME TIME,
+PRIMARY KEY (O_ID)
+);
+
+CREATE TABLE CART(
+CA_ID INT NOT NULL AUTO_INCREMENT,
+QTY INT NOT NULL,
+P_ID INT NOT NULL,
+O_ID INT NOT NULL,
+PRIMARY KEY(CA_ID),
+FOREIGN KEY(P_ID) REFERENCES PRODUCTS(P_ID),
+FOREIGN KEY(O_ID) REFERENCES OORDER(O_ID)
+);
+
+
+
+CREATE TABLE TABLES(
+T_ID INT NOT NULL AUTO_INCREMENT,
+OCCUPIED INT NOT NULL,
+O_ID INT,
+FOREIGN KEY(O_ID) REFERENCES OORDER(O_ID)
+);
+
+CREATE TABLE FEEDBACK(
+F_ID INT NOT NULL AUTO_INCREMENT,
+RATING INT NOT NULL,
+O_ID INT NOT NULL,
+FOREIGN KEY(O_ID) REFERENCES OORDER(O_ID)
+);
+
+INSERT INTO TABLES values (1,0,null);
+INSERT INTO TABLES (OCCUPIED,O_ID) values (0,null);
+INSERT INTO TABLES (OCCUPIED,O_ID) values (0,null);
+INSERT INTO TABLES (OCCUPIED,O_ID) values (0,null);
+INSERT INTO TABLES (OCCUPIED,O_ID) values (0,null);
+INSERT INTO TABLES (OCCUPIED,O_ID) values (0,null);
+INSERT INTO TABLES (OCCUPIED,O_ID) values (0,null);
+INSERT INTO TABLES (OCCUPIED,O_ID) values (0,null);
+INSERT INTO TABLES (OCCUPIED,O_ID) values (0,null);
+
+insert into products (Name,DESC,price,imgdir,type) values ('Rice','Plain White Rice',2.00,'rice.png',1);
+insert into products (Name,DESC,price,imgdir,type) values ('7-UP Can','Canned 7-Up',2.50,'7up.png',1);
+insert into products (Name,DESC,price,imgdir,type) values ('Pepsi Can','Canned Pepsi',2.50,'pepsi.png',1);
+insert into products (Name,DESC,price,imgdir,type) values ('ChickChop Combo','Chicken Chop with fries, served with pepsi',8.5,'chop.jpg',2);
+insert into products (Name,DESC,price,imgdir,type) values ('Nasi Lemak Combo','Nasi Lemak served with curry chicken, served with 7-up',6.5,'lemak.jpg',2);
+
+insert into oorder values (1402,null,null,null);
