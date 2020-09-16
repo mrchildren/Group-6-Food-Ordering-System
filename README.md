@@ -6,7 +6,7 @@ Upon downloading this project, you need to initialize the database
 You can do so by first running the KTKL.java file
 this will show you the main page which consist of the title, and two buttons (Dine in and Takeaway)
 
-there are an invisible button at the bottom right of the panel, click on that region until the panel changes
+there is an invisible button at the bottom right of the panel, click on that region until the panel changes
 the panel will change to a "developer" console page
 you will then see a green button at top right corner named "INIT"
 
