@@ -1,0 +1,21 @@
+2020-08-05 19:58:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "OORDER" not found; SQL statement:
+SELECT * FROM oorder ORDER BY o_id DESC LIMIT 1; [42102-197]
+2020-08-05 19:58:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TABLES" not found; SQL statement:
+select occupied from tables where t_id=1; [42102-197]
+2020-08-05 19:58:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "PRODUCTS" not found; SQL statement:
+select (p_id*1) as id, name, price from products where type=1 and products.p_id not in(select p_id from cart where o_id=0) order by p_id asc [42102-197]
+2020-08-05 19:58:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "OORDER" not found; SQL statement:
+SELECT * FROM oorder ORDER BY o_id DESC LIMIT 1; [42102-197]
+2020-08-05 19:59:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TABLES" not found; SQL statement:
+select occupied from tables where t_id=1; [42102-197]
+2020-08-05 19:59:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "PRODUCTS" not found; SQL statement:
+select (p_id*1) as id, name, price from products where type=1 and products.p_id not in(select p_id from cart where o_id=0) order by p_id asc [42102-197]
+2020-08-05 19:59:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TABLES" not found; SQL statement:
+select occupied from tables where t_id=1; [42102-197]
