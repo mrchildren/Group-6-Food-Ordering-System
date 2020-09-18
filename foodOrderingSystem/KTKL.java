@@ -508,6 +508,11 @@ public class KTKL{
 				} catch (SQLException e1) {
 					e1.printStackTrace();
 				}
+
+				MENU_DESC.setText("");
+				MENU_IMG.setIcon(null);
+				CART_IMG.setIcon(null);
+				CART_QTY.setText("");
 			}
 		});
 		B_MENU_CART.setIcon(new ImageIcon(KTKL.class.getResource("/assets_img/ADD TO CART.png")));
@@ -530,6 +535,15 @@ public class KTKL{
 				} catch (SQLException e1) {
 					e1.printStackTrace();
 				}
+
+				MENU_DESC.setText("");
+				MENU_IMG.setIcon(null);
+				CART_IMG.setIcon(null);
+				CART_QTY.setText("");
+
+				ALA_TABLE.clearSelection();
+				COMBO_TABLE.clearSelection();
+				CART_TABLE.clearSelection();
 			}
 		});
 		B_MENU_NEXT.setIcon(new ImageIcon(KTKL.class.getResource("/assets_img/NEXT.png")));
@@ -705,6 +719,11 @@ public class KTKL{
 				} catch (SQLException e1) {
 					e1.printStackTrace();
 				}
+
+				MENU_DESC.setText("");
+				MENU_IMG.setIcon(null);
+				CART_IMG.setIcon(null);
+				CART_QTY.setText("");
 			}
 		});
 		B_CART_REMOVE.setIcon(new ImageIcon(KTKL.class.getResource("/assets_img/REMOVE.png")));
@@ -718,7 +737,15 @@ public class KTKL{
 		B_CART_PREV.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				tabbedPane.setSelectedIndex(2);
+				MENU_DESC.setText("");
+				MENU_IMG.setIcon(null);
+				CART_IMG.setIcon(null);
+				CART_QTY.setText("");
+				ALA_TABLE.clearSelection();
+				COMBO_TABLE.clearSelection();
+				CART_TABLE.clearSelection();
 			}
+			
 		});
 		B_CART_PREV.setIcon(new ImageIcon(KTKL.class.getResource("/assets_img/PREV.png")));
 		B_CART_PREV.setBounds(739, 464, 64, 64);
