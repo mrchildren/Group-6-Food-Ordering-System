@@ -333,7 +333,7 @@ public class KTKL{
 		panel.add(btnTakeaway);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon(KTKL.class.getResource("/assets_img/welc.png")));
+		lblNewLabel_1.setIcon(new ImageIcon(KTKL.class.getResource("/assets_img/w.png")));
 		lblNewLabel_1.setBounds(12, 13, 1027, 305);
 		panel.add(lblNewLabel_1);
 		
